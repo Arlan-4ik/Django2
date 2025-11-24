@@ -5,16 +5,35 @@
     <title>Главная :: Доска обяъвления</title>
 </head>
 <body>
+<main>
+    <h1>Добро пожаловать!</h1>
+    <p>Сдесь вы найдете обяъление.</p>
+</main>
 
       <h1>Обяъления</h1>
 
+    <div>
+                {# <a href="/">Главная</a> #}
+        <a href="{% url 'index' %}">Главная</a>
+        {% for rubric in rubrics %}
+                {#  <a href="{{ rubric.pk }}/">{{ rubric.name }}</a> #}
+                <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
+        {% endfor %}
+    </div>
+
       {% for bb in bbs %}
       <div>
-          <h2>{{ bb.title }}</h2>
-          <p>{{ bb.content }}</p>
-          <p>{{ bb.published|date:"d.m.Y H:i:s"}}</p>
+          <h2>Объявления: {{ bb.title }}</h2>
+          <p>Описание: {{ bb.content }}</p>
+            <p>
+                <a href="{% url 'by_rubric' bb.rubric.pk %}">{{ bb.rubric.name }}</a>
+            </p>
+          <p>Дата публикации: {{ bb.published|date:"d.m.Y H:i:s"}}</p>
       </div>
       {% endfor %}
 
+<footer>
+    <p>© 2025 Бораев Арлан Русланович</p>
+</footer>
 </body>
 </html>
