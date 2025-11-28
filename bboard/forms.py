@@ -3,7 +3,7 @@ from django.forms import ModelForm
 from bboard.models import Bboard
 
 
-class BoardForm(ModelForm):
+class BboardForm(ModelForm):
     class Meta:
         model = Bboard
         fields = ('title', 'content', 'price', 'rubric')

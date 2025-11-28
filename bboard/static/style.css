@@ -1,0 +1,53 @@
+/* Заголовок */
+header h1 {
+    font-size: 40pt;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    margin: 20px 0 30px;
+    color: #222;
+}
+
+/* Навигация */
+nav {
+    width: 200px;
+    float: left;
+    font-size: 16pt;
+    padding: 15px 10px;
+    border-right: 1px solid #ddd;
+    min-height: 100vh;
+}
+
+nav a {
+    display: block;
+    margin: 15px 0;
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: 0.25s ease;
+}
+
+nav a:hover {
+    color: #000;
+    transform: translateX(5px);
+}
+
+/* Основная часть */
+section {
+    margin-left: 230px;
+    padding: 20px 30px;
+    line-height: 1.7;
+    font-size: 14pt;
+    color: #333;
+}
+
+/* Футер */
+footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 13pt;
+    color: #666;
+    border-top: 1px solid #ccc;
+    letter-spacing: 1px;
+}
